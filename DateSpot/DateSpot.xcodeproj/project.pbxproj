@@ -28,11 +28,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		58751BD6308A9D8A00DF15B8 /* DateSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DateSpot.app; path = "/Users/yairdiaz/Desktop/Date_Plans_App/DateSpot/build/Debug-iphoneos/DateSpot.app"; sourceTree = "<absolute>"; };
-		58751BE5308A9D8C00DF15B8 /* DateSpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DateSpotTests.xctest; path = "/Users/yairdiaz/Desktop/Date_Plans_App/DateSpot/build/Debug-iphoneos/DateSpot.app/PlugIns/DateSpotTests.xctest"; sourceTree = "<absolute>"; };
-		58751BEF308A9D8C00DF15B8 /* DateSpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DateSpotUITests.xctest; path = "/Users/yairdiaz/Desktop/Date_Plans_App/DateSpot/build/Debug-iphoneos/DateSpotUITests-Runner.app/PlugIns/DateSpotUITests.xctest"; sourceTree = "<absolute>"; };
+		58751BD6308A9D8A00DF15B8 /* DateSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58751BE5308A9D8C00DF15B8 /* DateSpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateSpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58751BEF308A9D8C00DF15B8 /* DateSpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateSpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58751C00308A9EF500DF15B8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		58DE0C9F309BAEF400AEDA63 /* Exceptions for "Assets.xcassets" folder in "DateSpot" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+				Item.swift,
+			);
+			target = 58751BD5308A9D8A00DF15B8 /* DateSpot */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		58751BD8308A9D8A00DF15B8 /* DateSpot */ = {
@@ -72,6 +83,9 @@
 		};
 		58751C09308AA03000DF15B8 /* Assets.xcassets */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				58DE0C9F309BAEF400AEDA63 /* Exceptions for "Assets.xcassets" folder in "DateSpot" target */,
+			);
 			path = Assets.xcassets;
 			sourceTree = "<group>";
 		};
@@ -108,6 +122,9 @@
 				58751C05308AA00800DF15B8 /* ViewModels */,
 				58751C07308AA02300DF15B8 /* Services */,
 				58751C09308AA03000DF15B8 /* Assets.xcassets */,
+				58751BD6308A9D8A00DF15B8 /* DateSpot.app */,
+				58751BE5308A9D8C00DF15B8 /* DateSpotTests.xctest */,
+				58751BEF308A9D8C00DF15B8 /* DateSpotUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,7 +204,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2700;
-				LastUpgradeCheck = 2700;
+				LastUpgradeCheck = 2720;
 				TargetAttributes = {
 					58751BD5308A9D8A00DF15B8 = {
 						CreatedOnToolsVersion = 27.0;
@@ -332,6 +349,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -388,6 +406,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
