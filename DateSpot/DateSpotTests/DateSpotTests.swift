@@ -7,7 +7,6 @@
 
 import Testing
 
-
 struct DateSpotTests {
 
     @Test func example() async throws {

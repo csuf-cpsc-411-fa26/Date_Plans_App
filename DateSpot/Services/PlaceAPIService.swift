@@ -40,6 +40,11 @@ final class PlaceAPIService {
         
         let (data, response) = try await URLSession.shared.data(for:request)
         
+        if let jsonString = String(data: data, encoding: .utf8) {
+            print("===== OVERPASS API RESPONSE =====")
+            print(jsonString)
+        }
+        
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {
             throw URLError(.badServerResponse)
@@ -51,7 +56,7 @@ final class PlaceAPIService {
         
         )
         
-        return decodedResponse.elements.compactMap { element in
+        return decodedResponse.elements.compactMap { element -> Place? in
             
             guard let name = element.tags["name"],
                   let amenity = element.tags["amenity"] else {
@@ -70,7 +75,7 @@ final class PlaceAPIService {
             
             let address = addressParts.isEmpty
                 ? "Address not available"
-            : addressParts.joined(seperator: " ")
+            : addressParts.joined(separator: " ")
             
             let cuisine = element.tags["cuisine"] ?? amenity
             
@@ -81,7 +86,8 @@ final class PlaceAPIService {
                 address: address,
                 rating: nil,
                 priceLevel: nil,
-                description: "Type: \(cuisine)"
+                description: "Type: \(cuisine)",
+                isRated: false
             
         )
             
