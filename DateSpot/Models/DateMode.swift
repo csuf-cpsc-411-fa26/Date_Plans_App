@@ -9,7 +9,7 @@ import Foundation
 
 enum DateMode: String, CaseIterable, Identifiable {
     case couple = "Couple Date"
-    case solo = "SoloDate"
+    case solo = "Solo Date"
     
     var id: String {
         rawValue

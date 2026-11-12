@@ -21,7 +21,7 @@ enum PlaceCategory: String, CaseIterable, Identifiable, Codable {
     var icon: String {
         switch self {
         case .restaurant:
-            return "fork.kinfe"
+            return "fork.knife"
         case .cafe:
             return "cup.and.saucer"
         case .activities:
